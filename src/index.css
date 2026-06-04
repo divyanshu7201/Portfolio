@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-anton: "Anton", sans-serif;
+
+  --color-primary: #facc15; /* Yellow-400 equivalent for accents, Tajmirul used teal/yellow accents for small icons */
+  --color-background-light: #ffffff;
+  --color-foreground: #171717; /* Neutral-900 */
+  --color-muted-foreground: #737373; /* Neutral-500 */
+}
+
+body {
+  background-color: var(--color-background-light);
+  color: var(--color-foreground);
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar for modern feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-foreground);
+}
