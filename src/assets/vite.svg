@@ -41,6 +41,9 @@
     </mask>
   </defs>
 
+  <!-- Dark rounded background for high visibility on any tab color -->
+  <rect width="100" height="100" rx="20" fill="#0f0f0f" stroke="#1f2937" stroke-width="2" />
+
   {/* Main Letter D path with the cut mask applied */}
   <path 
     d="M 25 15 L 60 15 A 35 35 0 0 1 60 85 L 25 85 Z M 45 33 L 55 33 A 17 17 0 0 1 55 67 L 45 67 Z" 
@@ -65,19 +68,31 @@
     mask="url(#slash-mask)"
   />
 
-  {/* The glowing neon slash line */}
+  {/* Glowing background electric blue slice (extra thick glow) */}
+  <line 
+    x1="10" 
+    y1="90" 
+    x2="50" 
+    y2="50" 
+    stroke="#0066ff" 
+    stroke-width="6" 
+    stroke-linecap="round" 
+    filter="url(#neon-glow)"
+    opacity="0.9"
+  />
+
+  {/* Vibrant cyan middle slice layer */}
   <line 
     x1="10" 
     y1="90" 
     x2="50" 
     y2="50" 
     stroke="#00f0ff" 
-    stroke-width="3.5" 
+    stroke-width="3" 
     stroke-linecap="round" 
-    filter="url(#neon-glow)" 
   />
   
-  {/* Inner white hot core of the slash for high realistic glow */}
+  {/* Inner hot white core */}
   <line 
     x1="10" 
     y1="90" 
