@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,14 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Brand Logo Top Left */}
+      <div className="fixed top-0 left-0 z-50 p-6 md:p-10 flex items-center gap-3 select-none">
+        <a href="#" className="flex items-center gap-3">
+          <Logo size={44} glowColor="#00f0ff" />
+          <span className="font-anton text-lg tracking-widest text-white max-sm:hidden">DIVYANSHU</span>
+        </a>
+      </div>
+
       {/* Sticky Hamburger Button */}
       <div className="fixed top-0 right-0 z-50 p-6 md:p-10">
         <button 
